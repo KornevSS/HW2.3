@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTextField: UITextField!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func userLoginButtonClicked() {
+//        guard let userLoginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") else { return }
+//        self.navigationController?.pushViewController(userLoginVC, animated: true)
+        
+       
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? LoginViewController else { return }
+        guard let nameOfUser = userNameTextField.text else { return }
+        destinationVC.nameOfUser = nameOfUser
+    }
+    
 }
 

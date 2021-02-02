@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C60C83125C9FA4B005CDFEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C83025C9FA4B005CDFEF /* LoginViewController.swift */; };
 		7CF6D8FD25C9E222000F23AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D8FC25C9E222000F23AD /* AppDelegate.swift */; };
 		7CF6D8FF25C9E222000F23AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D8FE25C9E222000F23AD /* SceneDelegate.swift */; };
 		7CF6D90125C9E222000F23AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D90025C9E222000F23AD /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C60C83025C9FA4B005CDFEF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CF6D8F925C9E222000F23AD /* HW2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF6D8FC25C9E222000F23AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CF6D8FE25C9E222000F23AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				7CF6D8FC25C9E222000F23AD /* AppDelegate.swift */,
 				7CF6D8FE25C9E222000F23AD /* SceneDelegate.swift */,
 				7CF6D90025C9E222000F23AD /* ViewController.swift */,
+				7C60C83025C9FA4B005CDFEF /* LoginViewController.swift */,
 				7CF6D90225C9E222000F23AD /* Main.storyboard */,
 				7CF6D90525C9E223000F23AD /* Assets.xcassets */,
 				7CF6D90725C9E223000F23AD /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C60C83125C9FA4B005CDFEF /* LoginViewController.swift in Sources */,
 				7CF6D90125C9E222000F23AD /* ViewController.swift in Sources */,
 				7CF6D8FD25C9E222000F23AD /* AppDelegate.swift in Sources */,
 				7CF6D8FF25C9E222000F23AD /* SceneDelegate.swift in Sources */,
@@ -294,7 +298,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "S.Kornev.HW2-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "S.Kornev.HW2-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
