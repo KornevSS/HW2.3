@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  WelcomeViewController.swift
 //  HW2.3
 //
 //  Created by Сергей Корнев on 03.02.2021.
@@ -12,13 +12,15 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet var userNameLabel: UILabel!
     
-    var nameOfUser: String = ""
-
+    var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = nameOfUser
+        userNameLabel.text = "Welcome, \(userName!)!"
     }
-
+    
+//    deinit {
+//        print("Welcome view controller has been deinited")
+//    }
 
 }
