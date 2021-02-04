@@ -35,20 +35,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func forgotUserNameButton() {
-        let alert = UIAlertController(title: "Your user name is", message: "'user'", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
-        
+    
+    @IBAction func forgotButtonsEventHandler(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Forgot User Name?" {
+            let alert = UIAlertController(title: "Your user name is", message: "'user'", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+        } else {
+            let alert = UIAlertController(title: "Your password is", message: "'welcome'", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+        }
         self.present(alert, animated: true)
     }
-    
-    @IBAction func forgotPasswordButton() {
-        let alert = UIAlertController(title: "Your password is", message: "'welcome'", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
-        
-        self.present(alert, animated: true)
-    }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     // всю бошку сломал с переходом по Return! Сдаюсь!

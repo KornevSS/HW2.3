@@ -19,14 +19,14 @@
                                 <rect key="frame" x="36" y="392" width="133" height="30"/>
                                 <state key="normal" title="Forgot User Name?"/>
                                 <connections>
-                                    <action selector="forgotUserNameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="sxS-cQ-eoN"/>
+                                    <action selector="forgotButtonsEventHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHj-0e-L87"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6s-gg-YPS">
                                 <rect key="frame" x="216" y="392" width="123" height="30"/>
                                 <state key="normal" title="Forgot Password?"/>
                                 <connections>
-                                    <action selector="forgotPasswordButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="cmK-Lg-1D8"/>
+                                    <action selector="forgotButtonsEventHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crJ-Ct-c7j"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-G4-xl5">
@@ -62,7 +62,7 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="loginButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEK-uT-6KZ"/>
-                                    <segue destination="aqr-tf-ljK" kind="modal" identifier="" modalPresentationStyle="fullScreen" id="RAW-d4-WuE"/>
+                                    <segue destination="aqr-tf-ljK" kind="custom" identifier="" id="RAW-d4-WuE"/>
                                 </connections>
                             </button>
                         </subviews>
