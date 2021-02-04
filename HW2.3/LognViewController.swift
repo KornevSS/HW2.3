@@ -37,13 +37,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func forgotButtonsEventHandler(_ sender: UIButton) {
+        var name1 = ""
+        var name2 = ""
         if sender.titleLabel?.text == "Forgot User Name?" {
-            let alert = UIAlertController(title: "Your user name is", message: "'user'", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+            name1 = "Your user name is"
+            name2 = "'user'"
         } else {
-            let alert = UIAlertController(title: "Your password is", message: "'welcome'", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
+            name1 = "Your password is"
+            name2 = "'welcome'"
         }
+        let alert = UIAlertController(title: name1, message: name2, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
