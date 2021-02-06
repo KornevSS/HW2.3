@@ -9,18 +9,17 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    // MARK: IB Outlets
     @IBOutlet var userNameLabel: UILabel!
     
-    var userName: String!
+    // MARK: Public properties
+    var userName = ""
     
+    // MARK: ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welcome, \(userName!)!"
+        userNameLabel.text = "Welcome, \(userName)!"
     }
-    
-//    deinit {
-//        print("Welcome view controller has been deinited")
-//    }
 
 }
