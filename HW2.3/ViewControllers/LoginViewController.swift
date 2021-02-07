@@ -10,33 +10,46 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    // MARK: IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    // MARK: Private properties
-    private let user = "user"
-    private let password = "password"
+    // MARK: - Public propertiew
+    var user: User!
     
-    // MARK: Navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as! WelcomeViewController
-        welcomeVC.userName = user
+    
+        let tabBarController = segue.destination as! UITabBarController
+        let viewControllers = tabBarController.viewControllers!
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let aboutVC = viewController as? AboutViewController {
+                aboutVC.user = user
+            } else if let resumeVC = viewController as? ResumeViewController {
+                resumeVC.user = user
+            } else if let hobbyVC = viewController as? HobbyViewController {
+                hobbyVC.user = user
+            }
+        }
     }
     
-    // MARK: ViewDidLoad
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameTextField.delegate = self
         passwordTextField.delegate = self
+        user = User.getData()
     }
     
-    // MARK: IB Actions
+    // MARK: - IB Actions
     @IBAction func loginButtonPressed() {
-        if userNameTextField.text! != user || passwordTextField.text! != password {
+        if userNameTextField.text! != user.userName || passwordTextField.text! != user.password {
             showAlert(
-                title: "Wrong name or password",
-                message: "Please enter correctly!",
+                title: "⚠️ Wrong name or password!",
+                message: "Please enter correct username and password",
                 textField: passwordTextField
             )
             return
@@ -44,19 +57,14 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
-    @IBAction func forgotButtonsEventHandler(_ sender: UIButton) {
-        var title: String
-        var message: String
-        if sender.titleLabel?.text == "Forgot User Name?" {
-            title = "Your user name is"
-            message = user
-        } else {
-            title = "Your password is"
-            message = password
-        }
-        showAlert(title: title, message: message)
+    @IBAction func forgotUserName() {
+        showAlert(title: "😳 Your user name is", message: user.userName)
     }
     
+    @IBAction func forgotPassword() {
+        showAlert(title: "🤦🏼‍♂️ Your password is", message: user.password)
+    }
+
     @IBAction func unwind(segue: UIStoryboardSegue) {
         passwordTextField.text = nil
         userNameTextField.text = nil
@@ -64,7 +72,8 @@ class LoginViewController: UIViewController {
  
 }
 
-// MARK: Alert controller
+
+// MARK: - Alert controller
 extension LoginViewController {
     private func showAlert(title: String?, message: String?, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -76,7 +85,7 @@ extension LoginViewController {
     }
 }
 
-// MARK: Work with keyboard
+// MARK: - Work with keyboard
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

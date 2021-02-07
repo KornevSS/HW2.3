@@ -12,14 +12,19 @@ class WelcomeViewController: UIViewController {
     
     // MARK: IB Outlets
     @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var userPhotoImageView: UIImageView!
     
     // MARK: Public properties
-    var userName = ""
+    var user: User!
     
-    // MARK: ViewDidLoad
+    // MARK: View did load
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameLabel.text = "Welcome, \(userName)!"
+        userNameLabel.text = "Welcome, \(user!.person.name) \(user!.person.surname)!"
+        guard let image = UIImage(named: user!.person.photo) else { return }
+        userPhotoImageView.contentMode = .scaleAspectFill
+        userPhotoImageView?.layer.cornerRadius = userPhotoImageView!.frame.width / 20
+        userPhotoImageView?.image = image
     }
 
 }

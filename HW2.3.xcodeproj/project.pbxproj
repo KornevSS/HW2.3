@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2B02D925CEFB900071B67C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B02D825CEFB900071B67C /* AboutViewController.swift */; };
+		7C4F248A25CEBC100063599B /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F248925CEBC100063599B /* Models.swift */; };
+		7C50C00625CFE23700826157 /* aboutme.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C50C00525CFE23600826157 /* aboutme.png */; };
 		7C60C83125C9FA4B005CDFEF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C83025C9FA4B005CDFEF /* WelcomeViewController.swift */; };
+		7C64980D25CF04BD00C70D26 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64980C25CF04BD00C70D26 /* ResumeViewController.swift */; };
+		7C64980F25CF050600C70D26 /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64980E25CF050600C70D26 /* HobbyViewController.swift */; };
+		7C64981325CF31D700C70D26 /* kornev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C64981225CF31D600C70D26 /* kornev.jpg */; };
 		7CF6D8FD25C9E222000F23AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D8FC25C9E222000F23AD /* AppDelegate.swift */; };
 		7CF6D8FF25C9E222000F23AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D8FE25C9E222000F23AD /* SceneDelegate.swift */; };
 		7CF6D90125C9E222000F23AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF6D90025C9E222000F23AD /* LoginViewController.swift */; };
@@ -17,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C2B02D825CEFB900071B67C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		7C4F248925CEBC100063599B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7C50C00525CFE23600826157 /* aboutme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutme.png; sourceTree = "<group>"; };
 		7C60C83025C9FA4B005CDFEF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7C64980C25CF04BD00C70D26 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		7C64980E25CF050600C70D26 /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
+		7C64981225CF31D600C70D26 /* kornev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kornev.jpg; sourceTree = "<group>"; };
 		7CF6D8F925C9E222000F23AD /* HW2.3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW2.3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF6D8FC25C9E222000F23AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CF6D8FE25C9E222000F23AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +56,9 @@
 			children = (
 				7CF6D90025C9E222000F23AD /* LoginViewController.swift */,
 				7C60C83025C9FA4B005CDFEF /* WelcomeViewController.swift */,
+				7C2B02D825CEFB900071B67C /* AboutViewController.swift */,
+				7C64980C25CF04BD00C70D26 /* ResumeViewController.swift */,
+				7C64980E25CF050600C70D26 /* HobbyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -70,6 +85,8 @@
 		7C4F248525CEACA10063599B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C50C00525CFE23600826157 /* aboutme.png */,
+				7C64981225CF31D600C70D26 /* kornev.jpg */,
 				7CF6D90525C9E223000F23AD /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -78,6 +95,7 @@
 		7C4F248625CEACB80063599B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7C4F248925CEBC100063599B /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,7 +187,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF6D90925C9E223000F23AD /* LaunchScreen.storyboard in Resources */,
+				7C50C00625CFE23700826157 /* aboutme.png in Resources */,
 				7CF6D90625C9E223000F23AD /* Assets.xcassets in Resources */,
+				7C64981325CF31D700C70D26 /* kornev.jpg in Resources */,
 				7CF6D90425C9E222000F23AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,10 +201,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C2B02D925CEFB900071B67C /* AboutViewController.swift in Sources */,
+				7C64980D25CF04BD00C70D26 /* ResumeViewController.swift in Sources */,
 				7C60C83125C9FA4B005CDFEF /* WelcomeViewController.swift in Sources */,
 				7CF6D90125C9E222000F23AD /* LoginViewController.swift in Sources */,
 				7CF6D8FD25C9E222000F23AD /* AppDelegate.swift in Sources */,
 				7CF6D8FF25C9E222000F23AD /* SceneDelegate.swift in Sources */,
+				7C4F248A25CEBC100063599B /* Models.swift in Sources */,
+				7C64980F25CF050600C70D26 /* HobbyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
